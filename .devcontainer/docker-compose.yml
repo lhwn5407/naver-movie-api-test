@@ -12,12 +12,23 @@ services:
         USER_UID: 1000
         USER_GID: 1000
 
+    restart: unless-stopped
+
     volumes:
+      # node 프로젝트 파일 bind mount
       - ..:/workspace:cached
+      # DB 볼륨
+      - mariadb-data:/var/lib/mysql
 
     environment:
+      # 공통 환경변수
       TZ: Asia/Seoul
       LC_ALL: en_US.UTF-8
+      # DB 환경 변수
+      MYSQL_ROOT_PASSWORD: mariadb
+      MYSQL_DATABASE: mariadb
+      MYSQL_USER: mariadb
+      MYSQL_PASSWORD: mariadb
 
     # Overrides default command so things don't shut down after the process ends.
     command: sleep infinity
@@ -28,27 +39,10 @@ services:
     # Use "forwardPorts" in **devcontainer.json** to forward an app port locally.
     # (Adding the "ports" property to this file will not forward from a Codespace.)
     ports:
+      # node run serve 포트
       - "8080:8080"
-
-  db:
-    image: mariadb:10.4
-    restart: unless-stopped
-    volumes:
-      - mariadb-data:/var/lib/mysql
-    environment:
-      MYSQL_ROOT_PASSWORD: mariadb
-      MYSQL_DATABASE: mariadb
-      MYSQL_USER: mariadb
-      MYSQL_PASSWORD: mariadb
-      TZ: Asia/Seoul
-      LC_ALL: en_US.UTF-8
-
-    # Runs MariaDB on the same network as the app container, allows "forwardPorts" in devcontainer.json function.
-    network_mode: service:app
-
-
-    # Add "forwardPorts": ["3306"] to **devcontainer.json** to forward MongoDB locally.
-    # (Adding the "ports" property to this file will not forward from a Codespace.)
+      # DB 포트
+      - "3306:3306"
 
 volumes:
   mariadb-data:

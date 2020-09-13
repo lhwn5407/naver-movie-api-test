@@ -1,16 +1,14 @@
 // Update the VARIANT arg in docker-compose.yml to pick a Node.js version: 10, 12, 14
 {
-  "name": "Node.js & Vue.js & MariaDB",
+  "name": "Node.js & Vue.js & MariaDB 1container version",
   "dockerComposeFile": "docker-compose.yml",
   "service": "app",
   "workspaceFolder": "/workspace",
-
   // set *default* container specific settings.json value on container create
   "settings": {
     // 기본 터미널 zsh
     "terminal.integrated.shell.linux": "/bin/zsh"
   },
-
   // Add the IDs of extensions you want installed when the container is created.
   "extensions": [
     // 웹 기본
@@ -29,14 +27,14 @@
     "albert.tabout",
     "oderwat.indent-rainbow"
   ],
-
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
   // "forwardPorts": [],
-  "appPort": ["8080:8080"],
-
+  "appPort": [
+    "8080:8080", // node
+    "3306:3306" // mariadb
+  ],
   // Use 'postCreateCommand' to run commands after the container is created.
-  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y vim bash-completion && sudo bash -c 'npm completion >> /etc/bash_completion.d/npm-completion2'",
-
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y vim bash-completion && sudo bash -c 'npm completion >> /etc/bash_completion.d/npm-completion'",
   // Uncomment to connect as a non-root user. See https://aka.ms/vscode-remote/containers/non-root.
   "remoteUser": "node"
 }
