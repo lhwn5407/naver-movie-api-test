@@ -1,7 +1,12 @@
 const dotenv = require('dotenv');
-dotenv.config();
+const result = dotenv.config();
 
-export default {
+if (result.error) {
+  console.log(result.parsed);
+  throw result.error;
+}
+
+module.exports = {
   naver: {
     clientId: process.env.NAVER_CLIENT_ID,
     clientSecret: process.env.NAVER_CLIENT_SECRET,

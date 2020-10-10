@@ -47,6 +47,7 @@
   // javascript 파일을 검사할때 vscode 자체 검사기 대신 eslint를 사용하도록 변경. 기본 검사기 비활성화
   // 참고 : https://stackoverflow.com/questions/51069070/removing-ts-errors-from-js-files-in-vs-code
   "javascript.validate.enable": false,
+  "typescript.validate.enable": false,
 
   //
   // 언어별 설정
@@ -78,6 +79,12 @@
   // 모든 언어에 대한 기본 포매터를 prettier 로 지정. editor.formatOnSave 시 사용
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   // 저장시 기본 포매터 실행 (prettier)
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
   // END: prettier로 포맷하는 언어들
+
+  // .env 파일에 대한 syntax highlighting
+  "files.associations": {
+    "/*/backend/.env": "ini",
+    "/*/backend/.env.example": "ini"
+  }
 }
