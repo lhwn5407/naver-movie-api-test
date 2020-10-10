@@ -30,7 +30,8 @@
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
   // "forwardPorts": [],
   "appPort": [
-    "8080:8080", // node
+    "8080:8080", // /frontend 개발서버
+    "3000:3000", // /backend express 서버
     "3306:3306" // mariadb
   ],
   // Use 'postCreateCommand' to run commands after the container is created.
