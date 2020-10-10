@@ -1,6 +1,37 @@
-# vue와 naver 영화 api를 활용해 영화를 리스팅 해봅니다
+# vue와 각종 영화 api를 활용해 영화를 리스팅 해봅니다
 
-## 소프트웨어 스택
+### 시작 하기
+
+##### 코드 받기
+
+```bash
+# 클론
+git clone https://github.com/lhwn5407/naver-movie-api-test
+cd naver-movie-api-test
+
+# submodule 받기
+git submodule update --init
+
+# 의존성 설치
+npm run install-all
+```
+
+##### 서버 시작
+
+```bash
+# 백엔드, 프론트 엔드 동시에 실행
+npm run serve-all
+
+# 백엔드 express 서버 (3000)
+cd backend
+npm run serve
+
+# 프론트엔드 개발 서버 (8080)
+cd frontend
+npm run serve
+```
+
+### 소프트웨어 스택
 
 - 도커 컨테이너 기반 개발환경
 - vue.js (frontend)
