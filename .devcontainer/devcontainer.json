@@ -15,7 +15,7 @@
     "esbenp.prettier-vscode",
     "dbaeumer.vscode-eslint",
     "ms-azuretools.vscode-docker",
-    "davidanson.vscode-markdownlint",
+    // "davidanson.vscode-markdownlint",
     "eg2.vscode-npm-script",
     "christian-kohler.npm-intellisense",
     // db 관련
