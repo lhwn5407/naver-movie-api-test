@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# commit 실행시 자동으로 실행되는 스크립트.
+# `npm run install-all` 실행시 .git/hooks 하위에 설치됨.
+
+##
+# README 목차 갱신
+##
+npm run update-readme-toc
+git add README.md

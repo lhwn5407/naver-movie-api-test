@@ -2,7 +2,7 @@
 
 ### 목차
 
-<!-- 아래는 npm run update-readme-toc 를 활용한 자동 목차 삽입 구간임. 자동 갱신 -->
+<!-- 아래는 npm run update-readme-toc 를 활용한 자동 목차 삽입 구간임. pre-commit hook에 의해 자동 갱신 -->
 
 <!-- prettier-ignore-start -->
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->

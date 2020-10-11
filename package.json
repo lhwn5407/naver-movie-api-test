@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "## 소프트웨어 스택",
   "scripts": {
-    "install-all": "npm install && npm run install-frontend && npm run install-backend",
+    "install-all": "npm install && npm run install-frontend && npm run install-backend install-pre-commit-hook",
     "install-frontend": "cd frontend && npm install",
     "install-backend": "cd backend && npm install",
+    "install-pre-commit-hook": "cp -avp tools/pre-commit .git/hooks/",
     "serve-all": "npm-run-all -p serve-frontend serve-backend",
     "serve-frontend": "cd frontend && npm run serve",
     "serve-backend": "cd backend && npm run serve",
