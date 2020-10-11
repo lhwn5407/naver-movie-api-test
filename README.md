@@ -1,5 +1,27 @@
 # vue와 각종 영화 api를 활용해 영화를 리스팅 해봅니다
 
+### 목차
+
+<!-- 아래는 npm run update-readme-toc 를 활용한 자동 목차 삽입 구간임. 자동 갱신 -->
+
+<!-- prettier-ignore-start -->
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+
+- [시작 하기](#%EC%8B%9C%EC%9E%91-%ED%95%98%EA%B8%B0)
+    - [코드 받기](#%EC%BD%94%EB%93%9C-%EB%B0%9B%EA%B8%B0)
+    - [서버 시작](#%EC%84%9C%EB%B2%84-%EC%8B%9C%EC%9E%91)
+- [소프트웨어 스택](#%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EC%8A%A4%ED%83%9D)
+- [파일 구조](#%ED%8C%8C%EC%9D%BC-%EA%B5%AC%EC%A1%B0)
+- [express 환경](#express-%ED%99%98%EA%B2%BD)
+- [vue-cli 환경](#vue-cli-%ED%99%98%EA%B2%BD)
+    - [frontend 빌드 출력 디렉토리 지정 및 프록시](#frontend-%EB%B9%8C%EB%93%9C-%EC%B6%9C%EB%A0%A5-%EB%94%94%EB%A0%89%ED%86%A0%EB%A6%AC-%EC%A7%80%EC%A0%95-%EB%B0%8F-%ED%94%84%EB%A1%9D%EC%8B%9C)
+- [기타 트윅](#%EA%B8%B0%ED%83%80-%ED%8A%B8%EC%9C%85)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+<!-- prettier-ignore-end -->
+
 ### 시작 하기
 
 ##### 코드 받기

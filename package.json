@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "description": "## 소프트웨어 스택",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "install-all": "npm install && npm run install-frontend && npm run install-backend",
     "install-frontend": "cd frontend && npm install",
     "install-backend": "cd backend && npm install",
     "serve-all": "npm-run-all -p serve-frontend serve-backend",
     "serve-frontend": "cd frontend && npm run serve",
-    "serve-backend": "cd backend && npm run serve"
+    "serve-backend": "cd backend && npm run serve",
+    "update-readme-toc": "doctoc --github --notitle README.md"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,7 @@
   "devDependencies": {
     "@vue/eslint-config-prettier": "^6.0.0",
     "babel-eslint": "^10.1.0",
+    "doctoc": "^1.4.0",
     "eslint": "^7.10.0",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-vue": "^7.0.1",
